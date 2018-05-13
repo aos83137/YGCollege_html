@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>바람개비</title>
+  </head>
+  <body>
+    <script type="text/javascript">
+      var i,j,num;
+      num = parseInt(prompt("짝수값 입력 (6이상)"));
+
+      for(i=0;i<num; i++)
+    {
+      for(j=0;j<num;j++)
+      {
+        if(i<num/2)//위쪽
+        {
+          if(j<num/2)//왼쪽위
+          {
+            if(j-i<0)
+            {
+              document.write("&nbsp;");
+            }else
+            {
+              document.write("*")
+            }
+          }else//오른쪽위
+          {
+            if(j+i<num-1)
+            {
+              document.write("&nbsp;");
+            }
+            else
+            {
+              document.write("*")  ;
+            }
+          }
+        }
+        else if(i>=num/2)//아래쪽
+        {
+          if(j<num/2)//왼쪽아래
+          {
+            if(j+i>num-1)
+            {
+              document.write("&nbsp;");
+            }else
+            {
+              document.write("*")
+            }
+          }else//오른쪽아래
+          {
+            if(j-i>0)
+            {
+              document.write("&nbsp;");
+            }
+            else
+            {
+              document.write("*")  ;
+            }
+          }
+        }
+      }
+      document.write("<br>");
+    }
+    </script>
+  </body>
+</html>
